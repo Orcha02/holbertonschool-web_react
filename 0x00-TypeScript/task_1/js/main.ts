@@ -9,10 +9,10 @@ interface Teacher {
 }
 // creating a teacher
 const teacher3: Teacher = {
-  firstName: 'John',
+  firstName: "John",
   fullTimeEmployee: false,
-  lastName: 'Doe',
-  location: 'London',
+  lastName: "Doe",
+  location: "London",
   contract: false,
 };
 
@@ -23,33 +23,36 @@ interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-// ex creating Director
+// Ex: creating Director
 const director1: Directors = {
-  firstName: 'John',
-  lastName: 'Doe',
-  location: 'London',
+  firstName: "John",
+  lastName: "Doe",
+  location: "London",
   fullTimeEmployee: true,
   numberOfReports: 17,
 };
 console.log(director1);
 
-// TASK3 Printing teachers
+// TASK 3 Printing teachers
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-export const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
+export const printTeacher: printTeacherFunction = (
+  firstName: string,
+  lastName: string
+): string => {
   return `${firstName[0]}. ${lastName}`;
-}
+};
 
 //example
-console.log(printTeacher("John", "Doe"));
+console.log(printTeacher("John", "Doe")); // -> J.Doe
 
 // TASK 4
 // https://www.typescriptlang.org/docs/handbook/interfaces.html
 // Difference between the static and instance sides of classes
 interface StudentConstructor {
-  new(firstName: string, lastName: string): StudentClassInterface;
+  new (firstName: string, lastName: string): StudentClassInterface;
 }
 interface StudentClassInterface {
   firstName: string;
@@ -57,7 +60,9 @@ interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
-export const StudentClass: StudentConstructor = class StudentClass implements StudentClassInterface {
+export const StudentClass: StudentConstructor = class StudentClass
+  implements StudentClassInterface
+{
   firstName: string;
   lastName: string;
   constructor(firstName: string, lastName: string) {
@@ -70,4 +75,4 @@ export const StudentClass: StudentConstructor = class StudentClass implements St
   displayName(): string {
     return this.firstName;
   }
-}
+};
