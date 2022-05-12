@@ -1,20 +1,21 @@
 {
-  "dependencies": {
-    "jquery": "^3.6.0",
-    "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0"
-  },
   "name": "task_0",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },
-  "author": "Daniel Ortega <orcha2002@gmail.com>",
-  "license": "MIT",
-  "description": ""
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
 }
