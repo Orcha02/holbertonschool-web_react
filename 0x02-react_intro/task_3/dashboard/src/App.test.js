@@ -1,0 +1,19 @@
+import { shallow } from "enzyme";
+import App from "./App";
+
+const wrapper = shallow(<App />);
+describe("App.test.js", () => {
+  it("Correct component rendering", () => {
+    shallow(<App />);
+  });
+
+  it("renders App-header", () => {
+    expect(wrapper.find("header.App-header").exists()).toEqual(true);
+  });
+  it("renders App-body", () => {
+    expect(wrapper.find("body.App-body").exists()).toEqual(true);
+  });
+  it("renders App-footer", () => {
+    expect(wrapper.find("footer.App-footer").exists()).toEqual(true);
+  });
+});

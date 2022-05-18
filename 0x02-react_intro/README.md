@@ -2,3 +2,4 @@
 
 - `npx create-react-app dashboard`
 - Testing `https://www.freecodecamp.org/news/testing-react-hooks/`
+- Enzyme: `https://www.npmjs.com/package/enzyme`
